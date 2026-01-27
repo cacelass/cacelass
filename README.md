@@ -18,3 +18,16 @@ I love turning data into meaningful insights. I'm a data enthusiast, enjoying ex
 ## Tech Stack
 
 Python | SQL | PL/SQL | Hive | NoSQL | Pandas | NumPy | Matplotlib | Seaborn | Scikit-learn | TensorFlow | PyTorch | Power BI | Azure | Linux | Docker | Git
+
+## Featured Projects
+
+### Scripts to Automate Project Setup
+- **preparacion-entorno** – Automates the creation of Data Science project structure.  
+- **preparacion-entorno-python** – Automates the creation of general Python project structure.
+
+### Data Science Projects
+- **stock-market-prediction** – Predicting stock market trends using ML models.  
+- **credito** – Predicts whether a credit application should be approved or denied using historical data and machine learning.
+
+### Automation / Pattern Analysis Projects
+- **rps** – Learns patterns from Rock-Paper-Scissors game data to automate predictions.
