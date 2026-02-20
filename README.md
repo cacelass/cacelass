@@ -1,43 +1,71 @@
-# Alex – Data Scientist & Data Analyst
+# Alex | Data Scientist
 
-Transformo datos en decisiones estratégicas. Combino experiencia técnica en **Big Data, Machine Learning y AI** con sólidos conocimientos en bases de datos y administración de sistemas, generando soluciones prácticas basadas en datos.
+I turn data into decisions.
 
----
+I specialize in building predictive models, extracting actionable insights, and designing reproducible data workflows. My background in systems administration provides a strong technical foundation, allowing me to understand not only models, but also the infrastructure, performance, and scalability behind them.
 
-## Perfil profesional
-- Experiencia en **Python, SQL, PL/SQL, Hive y NoSQL**, aplicados a proyectos de análisis y predicción.
-- Gestión y optimización de **bases de datos grandes y complejas**.
-- Uso diario de **Linux**, con habilidades avanzadas en línea de comandos y administración de sistemas.
-- Certificaciones: **Microsoft Azure Data Fundamentals**, **Power BI**.
-- Formación como **Técnico en Sistemas**, aportando una visión integral entre infraestructura, administración y análisis de datos.
-- Experiencia desarrollando proyectos propios que muestran capacidad de **automatización, análisis de patrones y predicción**.
+While the technologies listed below represent my current stack, I consider them a foundation—not a limitation. Continuous learning is part of my professional identity. I adapt quickly to new tools, embrace change as a constant in technology, and take on new challenges with discipline and analytical rigor.
 
 ---
 
-## Tecnologías y herramientas
-**Lenguajes y bases de datos:** Python | SQL | PL/SQL | Hive | NoSQL  
-**Data Science y ML:** Pandas | NumPy | Matplotlib | Seaborn | Scikit-learn | TensorFlow | PyTorch  
-**Plataformas y herramientas:** Power BI | Azure | Linux | Docker | Git  
+## Professional Profile
+
+- Strong experience in Python, SQL, PL/SQL, Hive, and NoSQL  
+- Development of Machine Learning models and predictive systems  
+- Data cleaning, feature engineering, and exploratory data analysis  
+- Optimization and management of large and complex databases  
+- Advanced daily use of Linux and command-line environments  
+- Background as a Systems Technician, bridging infrastructure and data  
+- Microsoft Azure Data Fundamentals Certified  
+- Power BI Certified  
 
 ---
 
-## Proyectos destacados
+## Tech Stack
 
-### Automatización de proyectos
-- **[preparacion-entorno](#)** – Estructura completa para proyectos de Data Science, acelerando la puesta en marcha de nuevos análisis.  
-- **[preparacion-entorno-python](#)** – Estructura automatizada para proyectos Python generales, optimizando tiempos de desarrollo.
+Languages & Databases  
+Python | SQL | PL/SQL | Hive | NoSQL  
 
-### Data Science aplicada
-- **[stock-market-prediction](#)** – Modelo de predicción de tendencias bursátiles, integrando técnicas de ML para análisis financiero.  
-- **[credito](#)** – Sistema de predicción de aprobación de créditos, basado en datos históricos y modelos de machine learning, demostrando capacidad para generar insights accionables.
+Data Science & Machine Learning  
+Pandas | NumPy | Matplotlib | Seaborn | Scikit-learn | TensorFlow | PyTorch  
 
-### Automatización y análisis de patrones
-- **[rps](#)** – Algoritmo que detecta patrones en datos de partidas de Piedra-Papel-Tijera, mostrando capacidad de análisis predictivo y automatización.
+Tools & Platforms  
+Linux | Docker | Git | Azure | Power BI  
 
 ---
 
-## Valor agregado
-- Transformar datos complejos en **información estratégica** y dashboards accionables.  
-- Desarrollar **modelos predictivos y algoritmos de análisis de patrones** adaptados a necesidades reales.  
+## Featured Projects
+
+### Project Automation
+
+preparacion-entorno  
+Scalable structure for Data Science projects designed to accelerate experimentation and ensure reproducibility.
+
+preparacion-entorno-python  
+Automated base architecture for Python projects, reducing setup time and improving maintainability.
 
 ---
+
+### Applied Data Science
+
+stock-market-prediction  
+Stock trend prediction model applying supervised learning techniques to financial time series data.
+
+credito  
+Credit approval prediction system built on historical datasets, with a focus on feature engineering, model evaluation, and business-oriented interpretation.
+
+---
+
+### Pattern Analysis & Automation
+
+rps  
+Predictive algorithm capable of identifying behavioral patterns in Rock-Paper-Scissors data, demonstrating probabilistic reasoning and pattern detection.
+
+---
+
+## Professional Value
+
+- Transform complex data into strategic insights  
+- Design robust predictive models with rigorous evaluation standards  
+- Write clean, structured, and reproducible code  
+- Combine analytical thinking with systems-level technical understanding  
