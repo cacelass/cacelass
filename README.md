@@ -27,7 +27,7 @@ Languages & Databases
 Python | SQL | PL/SQL | Hive | NoSQL  
 
 Data Science & Machine Learning  
-Pandas | NumPy | Matplotlib | Seaborn | Scikit-learn | TensorBoard | PyTorch  
+Pandas | NumPy | Matplotlib | Seaborn | Scikit-learn | TensorBoard | PyTorch | Polars
 
 Tools & Platforms  
 Linux | Docker | Git | Azure | Power BI  
