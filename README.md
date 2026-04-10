@@ -38,7 +38,7 @@ Linux | Docker | Git | Azure | Power BI
 
 ### Project Automation
 
-preparacion-entorno  
+dskit  
 Scalable structure for Data Science projects designed to accelerate experimentation and ensure reproducibility.
 
 preparacion-entorno-python  
