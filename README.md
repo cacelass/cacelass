@@ -44,7 +44,7 @@ the foundation behind every ML project I work on. It handles the boring parts so
 - Documentation scaffolding with Sphinx
 - Zero boilerplate — clone and start working
 
-**[credito](https://github.com/cacelass/credito)** — Credit Approval Classifier  
+**[credit-risk-classifier](https://github.com/cacelass/credit-risk-classifier)** — Credit Approval Classifier  
 Built on historical data with focus on interpretability and business-oriented evaluation.  
 `AUC: 0.81` · Models compared: Logistic Regression, Random Forest · Feature importance analyzed.
 
@@ -52,6 +52,3 @@ Built on historical data with focus on interpretability and business-oriented ev
 Not a "get rich" project — an honest exploration of ML on noisy real-world data.  
 Tackled overfitting, data leakage, and non-stationarity head-on. Binary classification (>2% move in 5 days),
 strict temporal split, AUC-ROC evaluation. The model beats the majority-class baseline. Barely. That's the point.
-
-**[rps](https://github.com/cacelass/rps)** — Pattern Detection  
-Can you model human "randomness"? Small project, interesting problem.
