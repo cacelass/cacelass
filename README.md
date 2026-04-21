@@ -20,11 +20,17 @@ working on something outside of work hours.
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat&logo=microsoftazure&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+
+![HDFS](https://img.shields.io/badge/HDFS-FF6F00?style=flat&logo=apache&logoColor=white)
+![Hive](https://img.shields.io/badge/Hive-FDEE21?style=flat&logo=apachehive&logoColor=black)
+![Sqoop](https://img.shields.io/badge/Sqoop-2C3E50?style=flat&logo=apache&logoColor=white)
+
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
 ![Polars](https://img.shields.io/badge/Polars-CD792C?style=flat&logo=polars&logoColor=white)
+
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
 **Certified:** Microsoft Azure Data Fundamentals · Power BI (DAX)  
