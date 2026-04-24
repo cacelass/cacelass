@@ -1,14 +1,21 @@
-# Alex | Data Scientist
+# Alex | ML Systems Engineer
 
-I build machine learning systems that solve real business problems.
+I build production-ready machine learning systems — from raw data to deployed models — designed to be reproducible, scalable, and usable in real environments.
 
-I design and build end-to-end machine learning systems, from data ingestion and feature engineering
-to model evaluation and deployment-ready code. My background in systems administration gives me a
-technical foundation that goes beyond models — I think about infrastructure, performance, and scalability too.
+Most ML projects fail outside the notebook. I focus on what actually matters in production: data pipelines, environment isolation, evaluation rigor, and system reliability.
 
-I don't consider my stack a ceiling. I pick up new tools when the problem
-requires it, keep up with what's moving in the field, and I'm always
-working on something outside of work hours.
+Background in systems administration (ASIR). I think in terms of infrastructure, failure modes, and performance before model complexity.
+
+---
+
+## What I deliver
+
+- End-to-end ML pipelines (ingestion → features → training → evaluation → output)
+- Reproducible environments with versioned dependencies (`uv`, Docker)
+- Calibrated probability outputs, not raw model scores
+- Evaluation frameworks with strict leakage control
+- ML systems decoupled from business decision logic
+- Batch scoring pipelines designed for real operational use
 
 ---
 
@@ -34,27 +41,66 @@ working on something outside of work hours.
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
 **Certified:** Microsoft Azure Data Fundamentals · Power BI (DAX)  
-[![Credly](https://img.shields.io/badge/Credly-FF6B00?style=flat&logo=credly&logoColor=white)](https://www.credly.com/users/alejandro-cancelas-chapela/badges#credly)
+[Credly](https://www.credly.com/users/alejandro-cancelas-chapela/badges#credly)
 
 ---
 
 ## Featured Projects
 
-**[dskit](https://github.com/cacelass/dskit)** — Data Science Toolkit  
-I got tired of setting up the same structure from scratch every time. So I built dskit —
-the foundation behind every ML project I work on. It handles the boring parts so I can focus on the problem.
+### [dskit](https://github.com/cacelass/dskit) — Reproducible ML project scaffold
 
-- Pre-configured structure: data, features, models, pipelines
-- Environment management with `uv`
-- Native support for both Pandas and Polars workflows
-- Documentation scaffolding with Sphinx
-- Zero boilerplate — clone and start working
+Production-grade template designed to eliminate environment drift and enforce consistent ML project structure from day one.
 
-**[credit-risk-classifier](https://github.com/cacelass/credit-risk-classifier)** — Credit Approval Classifier  
-Built on historical data with focus on interpretability and business-oriented evaluation.  
-`AUC: 0.81` · Models compared: Logistic Regression, Random Forest · Feature importance analyzed.
+**Why it matters**  
+Most ML failures are not model failures — they are reproducibility failures.
 
-**[stock-market-prediction](https://github.com/cacelass/stock-market-prediction)** — Financial Time Series  
-Not a "get rich" project — an honest exploration of ML on noisy real-world data.  
-Tackled overfitting, data leakage, and non-stationarity head-on. Binary classification (>2% move in 5 days),
-strict temporal split, AUC-ROC evaluation. The model beats the majority-class baseline. Barely. That's the point.
+**What it enforces**
+- Structured layout: `data/`, `features/`, `models/`, `pipelines/`
+- Dependency locking with `uv`
+- Built-in documentation with Sphinx
+- Dual support for Pandas / Polars workflows
+
+**Result**  
+Faster project setup, consistent structure, zero environment ambiguity.
+
+---
+
+### [credit-risk-classifier](https://github.com/cacelass/credit-risk-classifier) — Credit risk scoring system
+
+Built a classification system that outputs calibrated probabilities for real lending decisions — not just model predictions.
+
+**Key decisions**
+- Logistic Regression + Random Forest for interpretability
+- Explicit probability calibration (raw scores ≠ probabilities)
+- Threshold decoupled from model (business-controlled)
+
+**Evaluation**
+- Stratified k-fold cross-validation
+- Metric aligned with business decisioning
+
+**Result**  
+`AUC: 0.81` with interpretable outputs usable by non-technical stakeholders.
+
+---
+
+### [stock-market-prediction](https://github.com/cacelass/stock-market-prediction) — Time series under real constraints
+
+Explores ML in a low signal-to-noise, non-stationary environment with strict evaluation discipline.
+
+**What most people do wrong**  
+Random splits → data leakage → fake performance
+
+**What this project does**
+- Walk-forward validation (realistic deployment simulation)
+- Baseline comparison enforced
+- No leakage tolerated
+
+**Result**  
+Marginal improvement over baseline — which is the honest outcome in efficient markets.
+
+---
+
+## Positioning
+
+I don’t build models for notebooks.  
+I build systems that survive production.
