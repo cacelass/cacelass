@@ -1,21 +1,22 @@
 # Alex | ML Systems Engineer
 
-I build production-ready machine learning systems — from raw data to deployed models — designed to be reproducible, scalable, and usable in real environments.
+I build production-ready machine learning systems — from raw data to deployed models — designed to be reproducible, testable, and operational in real environments.
 
-Most ML projects fail outside the notebook. I focus on what actually matters in production: data pipelines, environment isolation, evaluation rigor, and system reliability.
+Most ML projects fail outside the notebook. I focus on production constraints: data quality, reproducibility, evaluation correctness, and system reliability.
 
-Background in systems administration (ASIR). I think in terms of infrastructure, failure modes, and performance before model complexity.
+Background in systems administration (ASIR). I design ML systems with infrastructure, failure modes, and performance in mind before model complexity.
 
 ---
 
 ## What I deliver
 
-- End-to-end ML pipelines (ingestion → features → training → evaluation → output)
-- Reproducible environments with versioned dependencies (`uv`, Docker)
-- Calibrated probability outputs, not raw model scores
-- Evaluation frameworks with strict leakage control
+- End-to-end ML pipelines (ingestion → validation → feature engineering → training → evaluation → inference)
+- Data pipelines with schema validation, quality checks, and leakage prevention
+- Reproducible environments with versioned data and locked dependencies (`uv`, Docker)
+- Calibrated probability outputs (Brier score, reliability curves), not raw model scores
+- Time-aware evaluation frameworks (walk-forward / stratified CV depending on problem type)
 - ML systems decoupled from business decision logic
-- Batch scoring pipelines designed for real operational use
+- Batch inference pipelines designed for scheduled production workloads
 
 ---
 
@@ -49,58 +50,66 @@ Background in systems administration (ASIR). I think in terms of infrastructure,
 
 ### [dskit](https://github.com/cacelass/dskit) — Reproducible ML project scaffold
 
-Production-grade template designed to eliminate environment drift and enforce consistent ML project structure from day one.
+Production-grade ML template designed to eliminate environment drift and enforce consistent project structure.
 
 **Why it matters**  
-Most ML failures are not model failures — they are reproducibility failures.
+Most ML failures are not model failures — they are reproducibility and data consistency failures.
 
 **What it enforces**
-- Structured layout: `data/`, `features/`, `models/`, `pipelines/`
+- Strict project structure (`data/`, `features/`, `models/`, `pipelines/`)
 - Dependency locking with `uv`
-- Built-in documentation with Sphinx
-- Dual support for Pandas / Polars workflows
+- Documentation system with Sphinx
+- Pandas / Polars interoperability
 
 **Result**  
-Faster project setup, consistent structure, zero environment ambiguity.
+Faster setup, consistent engineering standards, zero environment ambiguity.
 
 ---
 
 ### [credit-risk-classifier](https://github.com/cacelass/credit-risk-classifier) — Credit risk scoring system
 
-Built a classification system that outputs calibrated probabilities for real lending decisions — not just model predictions.
+ML system designed for real decision-making, focused on calibrated probabilities instead of raw predictions.
 
 **Key decisions**
-- Logistic Regression + Random Forest for interpretability
-- Explicit probability calibration (raw scores ≠ probabilities)
-- Threshold decoupled from model (business-controlled)
+- Logistic Regression + Random Forest for interpretability vs performance trade-off
+- Probability calibration (Platt scaling / isotonic regression)
+- Decision threshold decoupled from model (business layer owns decision policy)
 
 **Evaluation**
 - Stratified k-fold cross-validation
-- Metric aligned with business decisioning
+- Brier score + AUC as primary metrics
+- Strict leakage prevention across time and folds
 
 **Result**  
-`AUC: 0.81` with interpretable outputs usable by non-technical stakeholders.
+AUC: 0.81 with calibrated outputs suitable for operational decision systems.
 
 ---
 
 ### [stock-market-prediction](https://github.com/cacelass/stock-market-prediction) — Time series under real constraints
 
-Explores ML in a low signal-to-noise, non-stationary environment with strict evaluation discipline.
+ML applied to a non-stationary, low signal-to-noise environment under realistic constraints.
 
 **What most people do wrong**  
-Random splits → data leakage → fake performance
+Random splits → leakage → inflated performance
 
-**What this project does**
-- Walk-forward validation (realistic deployment simulation)
-- Baseline comparison enforced
-- No leakage tolerated
+**What this project enforces**
+- Walk-forward validation (deployment simulation)
+- Baseline-first evaluation discipline
+- Strict no-leakage constraints
 
 **Result**  
-Marginal improvement over baseline — which is the honest outcome in efficient markets.
+Marginal improvement over baseline, consistent with efficient market behavior.
 
 ---
 
 ## Positioning
 
-I don’t build models for notebooks.  
-I build systems that survive production.
+I design ML systems that remain stable under real-world constraints: shifting data distributions, imperfect labels, and production latency.
+
+I don’t optimize notebooks. I design systems that survive production.
+
+---
+
+## About me
+
+I enjoy learning new technologies and adapting quickly to different problem domains. I’m comfortable working across the full ML stack and iterating on systems from prototype to production.
