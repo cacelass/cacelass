@@ -1,22 +1,31 @@
-# Alex | ML Systems Engineer
+# Alex | ML Engineer — Banking & Finance Focus
 
-I build production-ready machine learning systems — from raw data to deployed models — designed to be reproducible, testable, and operational in real environments.
+I build production-ready machine learning systems for the financial domain — credit, fraud, AML and
+investment analysis — from raw data to deployed models, designed to be reproducible, testable and
+operational in real environments.
 
-Most ML projects fail outside the notebook. I focus on production constraints: data quality, reproducibility, evaluation correctness, and system reliability.
+Most ML projects fail outside the notebook. I focus on the production constraints that make a system
+defensible in front of a reviewer: data quality, leakage prevention, calibration, honest evaluation,
+and system reliability.
 
-Background in systems administration (ASIR). I design ML systems with infrastructure, failure modes, and performance in mind before model complexity.
+I'm passionate about data — inside and outside work. I love learning, taking on challenges and getting
+better with every project. My professional aspiration is to build decision systems that real
+institutions trust, and to keep growing as an ML engineer along the way.
+
+Background in systems administration (ASIR). I design ML systems with infrastructure, failure modes and
+performance in mind before model complexity.
 
 ---
 
 ## What I deliver
 
 - End-to-end ML pipelines (ingestion → validation → feature engineering → training → evaluation → inference)
-- Data pipelines with schema validation, quality checks, and leakage prevention
+- Fraud and AML detection with imbalance-first evaluation (precision-recall, not accuracy)
+- Credit and propensity models with calibrated probabilities and decoupled business thresholds
+- Time-series models with temporal validation, out-of-sample backtest and cost awareness
 - Reproducible environments with versioned data and locked dependencies (`uv`, Docker)
-- Calibrated probability outputs (Brier score, reliability curves), not raw model scores
-- Time-aware evaluation frameworks (walk-forward / stratified CV depending on problem type)
+- Drift monitoring for models in production (PSI)
 - ML systems decoupled from business decision logic
-- Batch inference pipelines designed for scheduled production workloads
 
 ---
 
@@ -29,87 +38,85 @@ Background in systems administration (ASIR). I design ML systems with infrastruc
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat&logo=microsoftazure&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-![HDFS](https://img.shields.io/badge/HDFS-FF6F00?style=flat&logo=apache&logoColor=white)
-![Hive](https://img.shields.io/badge/Hive-FDEE21?style=flat&logo=apachehive&logoColor=black)
-![Sqoop](https://img.shields.io/badge/Sqoop-2C3E50?style=flat&logo=apache&logoColor=white)
-
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
+![LightGBM](https://img.shields.io/badge/LightGBM-764ABC?style=flat&logo=lightgbm&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-E0234E?style=flat&logo=xgboost&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
 ![Polars](https://img.shields.io/badge/Polars-CD792C?style=flat&logo=polars&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat&logo=mlflow&logoColor=white)
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
-**Certified:** Microsoft Azure Data Fundamentals · Power BI (DAX)  
+**Certified:** Microsoft Azure Data Fundamentals · Power BI (DAX)
 [Credly](https://www.credly.com/users/alejandro-cancelas-chapela/badges#credly)
 
 ---
 
 ## Featured Projects
 
-### [dskit](https://github.com/cacelass/dskit) — Reproducible ML project scaffold
+### [dskit](https://github.com/cacelass/dskit) — Reproducible ML scaffold with an AI harness
 
-Production-grade ML template designed to eliminate environment drift and enforce consistent project structure.
-
-**Why it matters**  
-Most ML failures are not model failures — they are reproducibility and data consistency failures.
+Production-grade copier template that starts ML projects organised, reproducible and production-ready.
+Ships an AI harness with an entry gate, a verifiable backlog and a definition of "done" enforced in code.
 
 **What it enforces**
-- Strict project structure (`data/`, `features/`, `models/`, `pipelines/`)
-- Dependency locking with `uv`
-- Documentation system with Sphinx
-- Pandas / Polars interoperability
+- Strict project structure and dependency locking with `uv`
+- `harness finish` refuses to close a feature unless the gate passes with real command evidence
+- 4 ML profiles, 6 NN architectures, Sphinx docs by default
+- Two agent layers: reasoning agents + 30 deterministic Python agents
 
-**Result**  
-Faster setup, consistent engineering standards, zero environment ambiguity.
+### [ClimaSafe](https://github.com/ANFAIA/ClimaSafe) — Early-warning system for heat/cold risk
+
+Predicts thermal mortality risk per Spanish province and day (XGBoost + LSTM ensemble) with conformal
+prediction, km² risk maps, SHAP explainability and a Telegram bot. Built on ERA5 + MoMo data.
+Generated from the dskit template. Part of the ANFAIA Summer Grants 2026.
+
+**Real numbers** — Rec_riesgo (calibrated): XGBoost 0.668 (heat), LSTM 0.737 (heat) / 0.708 (cold).
+
+### [fraud-shield](https://github.com/cacelass/fraud-shield) — Fraud detection for fintech constraints
+
+End-to-end fraud detection on PaySim (~6.3M transactions, ~0.1% fraud). LightGBM with
+`class_weight='balanced'`, precision-recall as the primary lens, MLflow tracked.
+
+**Real numbers** — ROC-AUC 0.998 with fraud-class P/R/F1 ≈ 0.84/0.77/0.80 at the tuned threshold.
+
+### [credit-risk-classifier](https://github.com/cacelass/credit-risk-classifier) — Retail banking propensity
+
+Propensity model on UCI Bank Marketing to prioritise who to call in a campaign. Leakage-free
+preprocessing (transformers fitted on train only) and persisted, reproducible metrics.
+
+**Real numbers** — ROC-AUC 0.948, PR-AUC 0.651, recall 0.92 on the positive class.
+
+### [Stock-Market-Prediction](https://github.com/cacelass/Stock-Market-Prediction) — Time series under real constraints
+
+Directional movement prediction with walk-forward validation, out-of-sample backtest with costs,
+conformal prediction and drift monitoring. Honest about where it fails: after costs it does not beat
+buy & hold — and it documents exactly why.
+
+### [MeshHarmes](https://github.com/cacelass/MeshHarmes) — Agent harness in code
+
+24 Python agents (stdlib-only), a permission gate for irreversible actions, and a verifiable backlog.
+Provider-agnostic: any coding agent that can run shell commands can use it.
 
 ---
 
-### [credit-risk-classifier](https://github.com/cacelass/credit-risk-classifier) — Credit risk scoring system
+## In development
 
-ML system designed for real decision-making, focused on calibrated probabilities instead of raw predictions.
-
-**Key decisions**
-- Logistic Regression + Random Forest for interpretability vs performance trade-off
-- Probability calibration (Platt scaling / isotonic regression)
-- Decision threshold decoupled from model (business layer owns decision policy)
-
-**Evaluation**
-- Stratified k-fold cross-validation
-- Brier score + AUC as primary metrics
-- Strict leakage prevention across time and folds
-
-**Result**  
-AUC: 0.81 with calibrated outputs suitable for operational decision systems.
-
----
-
-### [stock-market-prediction](https://github.com/cacelass/stock-market-prediction) — Time series under real constraints
-
-ML applied to a non-stationary, low signal-to-noise environment under realistic constraints.
-
-**What most people do wrong**  
-Random splits → leakage → inflated performance
-
-**What this project enforces**
-- Walk-forward validation (deployment simulation)
-- Baseline-first evaluation discipline
-- Strict no-leakage constraints
-
-**Result**  
-Marginal improvement over baseline, consistent with efficient market behavior.
+A **portfolio manager** system to decide when to reinvest and when to withdraw — built on the
+evaluation rigour and backtest discipline of Stock-Market-Prediction.
 
 ---
 
 ## Positioning
 
-I design ML systems that remain stable under real-world constraints: shifting data distributions, imperfect labels, and production latency.
-
-I don’t optimize notebooks. I design systems that survive production.
+I design ML systems that remain stable under real-world constraints: shifting data distributions,
+imperfect labels, and production latency. I don't optimise notebooks — I design systems that survive
+production, and I measure them honestly.
 
 ---
 
 ## About me
 
-I enjoy learning new technologies and adapting quickly to different problem domains. I’m comfortable working across the full ML stack and iterating on systems from prototype to production.
+I enjoy learning new technologies and adapting quickly to different problem domains. I'm comfortable
+working across the full ML stack and iterating on systems from prototype to production. I'm a data
+enthusiast inside and outside work, always looking for the next challenge.
