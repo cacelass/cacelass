@@ -48,7 +48,8 @@ performance in mind before model complexity.
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 
 **Certified:** Microsoft Azure Data Fundamentals · Power BI (DAX)
-[Credly](https://www.credly.com/users/alejandro-cancelas-chapela/badges#credly)
+[Credly](https://www.credly.com/users/alejandro-cancelas-chapela/badges#credly) ·
+[LinkedIn](https://www.linkedin.com/in/cacelas/)
 
 ---
 
